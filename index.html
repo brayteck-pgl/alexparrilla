@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ALEX PARRILLA: hamburguesas y carnes a la parrilla al carbón. Conoce nuestro menú y consulta por servicios para eventos.">
+  <meta name="theme-color" content="#171412">
+  <title>ALEX PARRILLA | El sabor del fuego</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="ALEX PARRILLA, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">AP</span>
+        <span class="brand-name">ALEX <strong>PARRILLA</strong><small>EL SABOR DEL FUEGO</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#menu">Menú</a><a href="#experiencia">Experiencia</a><a href="#ubicacion">Ubicación</a><a class="nav-cta" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero brick-wall" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> PARRILLA · CARBÓN · SABOR</p>
+        <h1 id="heroTitle">EL SABOR<br>DEL <span>FUEGO.</span></h1>
+        <p class="hero-copy">Hamburguesas y carnes hechas para disfrutarse sin afán. El carácter del carbón, el aroma de la parrilla y el sabor que reúne.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#menu">Explorar menú <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#eventos">Parrilla para eventos</a></div>
+        <div class="hero-note"><span class="fire-dot" aria-hidden="true"></span><span>BRASA ENCENDIDA · EXPERIENCIA ALEX PARRILLA</span></div>
+      </div>
+      <div class="hero-stamp" aria-label="Especialistas en parrilla al carbón"><span>HECHO</span><strong>AL</strong><span>CARBÓN</span></div>
+      <a class="scroll-cue" href="#menu" aria-label="Desplazarse a nuestro menú">DESCUBRE <span aria-hidden="true">↓</span></a>
+    </section>
+    <section class="intro-strip" aria-label="Nuestra propuesta"><div class="container intro-strip-inner"><span>CARBÓN REAL</span><i aria-hidden="true">✦</i><span>BUENOS INGREDIENTES</span><i aria-hidden="true">✦</i><span>SABOR A LA PARRILLA</span></div></section>
+    <section class="section menu-section" id="menu" aria-labelledby="menuTitle">
+      <div class="container">
+        <div class="section-heading section-heading-row"><div><p class="eyebrow eyebrow-dark">DIRECTO DE LA PARRILLA</p><h2 id="menuTitle">NUESTRO <span>MENÚ</span></h2><p class="section-lead">Los favoritos de la casa, preparados para que el carbón haga su parte.</p></div>
+          <div class="filter-controls" role="group" aria-label="Filtrar productos del menú"><button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="hamburguesas" aria-pressed="false">Hamburguesas</button><button class="filter-button" type="button" data-filter="parrilla" aria-pressed="false">Parrilla</button></div>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="hamburguesas"><div class="product-image product-image-one"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Hamburguesa con queso, vegetales y pan dorado" loading="lazy"><span class="product-tag">RECOMENDADA</span></div><div class="product-info"><div class="product-title-line"><h3>La Alex</h3><span class="price">$28.900</span></div><p>Carne a la parrilla, queso, vegetales frescos y salsa de la casa.</p><span class="product-type">HAMBURGUESA</span></div></article>
+          <article class="product-card" data-category="hamburguesas"><div class="product-image product-image-two"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85" alt="Hamburguesa doble con queso y pan artesanal" loading="lazy"><span class="product-tag">MÁS SABOR</span></div><div class="product-info"><div class="product-title-line"><h3>Doble Brasa</h3><span class="price">$34.900</span></div><p>Doble carne, queso fundido y una combinación intensa de sabores.</p><span class="product-type">HAMBURGUESA</span></div></article>
+          <article class="product-card" data-category="parrilla"><div class="product-image product-image-three"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Carne asada sobre parrilla con marcas de cocción" loading="lazy"><span class="product-tag">AL CARBÓN</span></div><div class="product-info"><div class="product-title-line"><h3>Corte de la Casa</h3><span class="price">$39.900</span></div><p>Corte de res a la parrilla acompañado de guarnición del día.</p><span class="product-type">PARRILLA</span></div></article>
+          <article class="product-card" data-category="parrilla"><div class="product-image product-image-four"><img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=85" alt="Preparación de carne a la parrilla" loading="lazy"><span class="product-tag">A LA BRASA</span></div><div class="product-info"><div class="product-title-line"><h3>Costilla Brasa</h3><span class="price">$42.900</span></div><p>Costilla preparada a fuego y servida con acompañamiento.</p><span class="product-type">PARRILLA</span></div></article>
+        </div>
+        <div class="complement-strip"><div><span class="small-label">TAMBIÉN EN LA PARRILLA</span><p>Pequeños antojos para completar la experiencia.</p></div><div class="complement-items"><span>Pincho mixto <b>$18.900</b></span><span>Chorizo criollo <b>$14.900</b></span></div></div>
+        <p class="demo-note">Carta y precios de demostración en COP. Deben reemplazarse por la información real del restaurante.</p>
+      </div>
+    </section>
+    <section class="experience-section" id="experiencia" aria-labelledby="experienceTitle"><div class="experience-image" role="img" aria-label="Parrilla encendida con brasas y fuego"></div><div class="experience-content brick-wall"><div class="experience-content-inner"><p class="eyebrow">EL CARBÓN MARCA LA DIFERENCIA</p><h2 id="experienceTitle">NO ES SOLO<br>COMIDA. ES<br><span>EXPERIENCIA.</span></h2><p>El fuego reúne, el carbón aporta carácter y cada preparación se convierte en un momento para compartir. En ALEX PARRILLA, la experiencia comienza desde el primer vistazo.</p><a class="text-link" href="#eventos">Vive la experiencia <span aria-hidden="true">↗</span></a></div></div></section>
+    <section class="section gallery-section" aria-labelledby="galleryTitle"><div class="container"><div class="section-heading"><p class="eyebrow eyebrow-dark">EL AMBIENTE ALEX</p><h2 id="galleryTitle">FUEGO, SABOR <span>Y MOMENTOS</span></h2><p class="section-lead">Una mirada a lo que se vive alrededor de la parrilla.</p></div>
+      <div class="gallery-grid"><figure class="gallery-item gallery-large"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1200&q=85" alt="Carne asada servida para compartir" loading="lazy"><figcaption>EL SABOR SE COMPARTE</figcaption></figure><figure class="gallery-item"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=85" alt="Mesa preparada para una comida entre amigos" loading="lazy"><figcaption>BUENOS MOMENTOS</figcaption></figure><figure class="gallery-item"><img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=85" alt="Preparación de alimentos sobre la parrilla" loading="lazy"><figcaption>EL FUEGO EN ACCIÓN</figcaption></figure></div>
+    </div></section>
+    <section class="events-section brick-wall" id="eventos" aria-labelledby="eventsTitle"><div class="container events-grid"><div class="events-copy"><p class="eyebrow">EL FUEGO TAMBIÉN VA CONTIGO</p><h2 id="eventsTitle">TU EVENTO.<br><span>NUESTRA PARRILLA.</span></h2><p>Lleva una experiencia de parrilla a tus celebraciones o consulta por la posibilidad de realizar tu encuentro en el establecimiento.</p><ul class="event-list"><li><span aria-hidden="true">✦</span> Parrilla para eventos a domicilio.</li><li><span aria-hidden="true">✦</span> Celebraciones en el establecimiento.</li><li><span aria-hidden="true">✦</span> Atención según disponibilidad y detalles del evento.</li></ul><p class="demo-note demo-note-light">Servicio de demostración sujeto a confirmación de disponibilidad y condiciones reales.</p></div>
+      <form class="event-form" id="eventForm"><div class="form-heading"><span class="small-label">HABLEMOS DE TU EVENTO</span><h3>Solicita información</h3><p>Déjanos los datos básicos y prepara tu consulta.</p></div>
+        <div class="form-row"><div class="form-field"><label for="eventName">Nombre</label><input id="eventName" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required></div><div class="form-field"><label for="eventPhone">Teléfono</label><input id="eventPhone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Tu número" required></div></div>
+        <div class="form-row"><div class="form-field"><label for="eventType">Tipo de servicio</label><select id="eventType" name="tipo" required><option value="">Selecciona una opción</option><option value="Parrilla a domicilio">Parrilla a domicilio</option><option value="Evento en el establecimiento">Evento en el establecimiento</option></select></div><div class="form-field"><label for="eventGuests">Número de personas</label><input id="eventGuests" name="personas" type="number" min="1" max="500" placeholder="Ej. 25" required></div></div>
+        <div class="form-field"><label for="eventDetails">Cuéntanos un poco más</label><textarea id="eventDetails" name="detalles" rows="3" placeholder="Fecha tentativa, tipo de celebración u otra información"></textarea></div>
+        <button class="button button-primary form-submit" type="submit">Preparar consulta por WhatsApp <span aria-hidden="true">↗</span></button><p class="form-message" id="formMessage" role="status" aria-live="polite"></p><p class="form-disclaimer">Este formulario prepara un mensaje. No guarda ni envía información a un servidor.</p>
+      </form>
+    </div></section>
+    <section class="section location-section" id="ubicacion" aria-labelledby="locationTitle"><div class="container location-grid"><div><p class="eyebrow eyebrow-dark">ENCUÉNTRANOS</p><h2 id="locationTitle">EL CAMINO<br>TE LLEVA AL <span>SABOR.</span></h2><p class="section-lead">Estamos preparando este espacio para compartir contigo nuestra ubicación y horarios de atención.</p></div><div class="location-card"><div class="location-icon" aria-hidden="true">⌖</div><div><span class="small-label">DIRECCIÓN</span><p>Dirección por confirmar</p></div><div><span class="small-label">HORARIOS</span><p>Horarios por confirmar</p></div><span class="demo-note">Información provisional: actualizar antes de publicar.</span></div></div></section>
+    <section class="contact-band" id="contacto"><div class="container contact-band-inner"><div><p class="eyebrow">¿SE TE ANTOJÓ?</p><h2>EL FUEGO TE ESPERA.</h2></div><a class="button button-light" href="#contacto" data-whatsapp>Consultar por WhatsApp <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">AP</span><span class="brand-name">ALEX <strong>PARRILLA</strong><small>EL SABOR DEL FUEGO</small></span></a><p>Parrilla al carbón. Sabor para compartir.</p><span class="footer-copy">© <span id="currentYear">2026</span> ALEX PARRILLA · Proyecto demostrativo</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
