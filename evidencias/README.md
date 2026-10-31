@@ -1,13 +1,18 @@
-# Evidencias de validación
+# Evidencias del proyecto ALEX PARRILLA
 
-Guarda aquí las capturas reales tomadas desde el navegador.
+Las capturas reales de validación y refinamiento se encuentran organizadas en esta carpeta.
 
-Pendientes de capturar en tu equipo:
-- `vista-movil-360.png`
-- `vista-tablet-768.png`
-- `vista-escritorio-1200.png`
-- `filtro-hamburguesas.png`
-- `validacion-formulario.png`
-- `consola-sin-errores.png`
+## Pruebas funcionales y responsive
 
-No agregues capturas simuladas. Consulta la sección 7 de `DOCUMENTACION_TALLER.md` para el procedimiento y los criterios de validación.
+- `inicio-escritorio.png`: vista inicial en escritorio.
+- `menu-hamburguesas.png.png`: filtro de hamburguesas.
+- `formulario-vacio.png.png` y `campos-obligatorios.png.png`: validación del formulario.
+- `formulario-whatsapp.png`: comportamiento informativo del formulario relacionado con WhatsApp.
+- `consola-sin-errores.png.png`: consola del navegador después de las pruebas.
+- `responsive-360.png.png`, `responsive-768.png.png` y `responsive-1200.png.png`: adaptación a móvil, tableta y escritorio.
+
+## Refinamiento de identidad
+
+En `refinamiento/` se conservan la propuesta inicial BRASAS, la identidad posterior ALEX PARRILLA y una captura del resultado final. Estas imágenes documentan la evolución real de la identidad comercial; no representan una comparación de ajustes de código.
+
+Consulta [`../DOCUMENTACION_TALLER.md`](../DOCUMENTACION_TALLER.md) para el desarrollo del taller, los resultados de las pruebas y las reflexiones.
