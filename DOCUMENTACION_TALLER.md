@@ -46,37 +46,40 @@ Parrilla urbana premium con elementos rústicos: ladrillo a la vista, carbón, f
 
 ## 4. Comparación de técnicas de prompting
 
-Se comparan las cuatro técnicas sobre el mismo brief.
+Se trabajaron las cuatro técnicas utilizando el contexto de ALEX PARRILLA. Los siguientes ejemplos describen cómo se aplicaron y comprendieron durante el taller.
 
 ### Zero-shot
-Se solicita una propuesta sin ejemplos visuales de otros restaurantes. La IA toma decisiones autónomas sobre secciones, paleta HEX, tipografía, componentes, interacciones y responsive.
+Se solicita una propuesta sin ejemplos visuales de otros restaurantes. La IA toma decisiones sobre secciones, paleta, tipografía, componentes, interacciones y responsive a partir de la instrucción.
+
+**Ejemplo:** pedir una página para un restaurante de parrilla con colores oscuros, fotografías de hamburguesas y apariencia moderna, sin entregar referencias.
 
 **Observación:** permite explorar una dirección propia sin condicionar el resultado con referencias específicas. No garantiza originalidad absoluta.
 
 ### One-shot
-Se entrega un patrón de referencia: sección de servicios con título alineado a la izquierda, texto introductorio y tres tarjetas en fila; cada tarjeta incluye icono, título, descripción y botón. En móvil se apilan verticalmente.
+Se entrega un patrón de referencia: una tarjeta con fotografía, nombre, descripción, precio y botón de consulta.
 
-**Observación:** orienta la estructura de una sección y permite adaptar el patrón a productos y servicios del restaurante.
+**Observación:** un ejemplo orienta la estructura que se espera y permite adaptar ese patrón a otros productos.
 
 ### Few-shot
-Se proporcionan varios patrones: tarjetas con bordes suaves y espaciado uniforme; botones con color primario y estados hover/focus; secciones con título, descripción y grid; columnas adaptadas al tamaño de pantalla.
+Se proporcionan varios ejemplos de tarjetas, por ejemplo una de hamburguesa, otra de carne a la parrilla y otra de bebidas. Todas comparten fotografía, nombre, descripción y precio.
 
-**Observación:** varios ejemplos ayudan a mantener consistencia entre componentes, sin forzar patrones donde no sean adecuados.
+**Observación:** varios ejemplos ayudan a identificar un patrón y mantener consistencia entre componentes.
 
 ### Chain of Thought / planificación por etapas
-Se solicita organizar la propuesta por etapas: necesidades del usuario, jerarquía de secciones, colores y tipografía, productos, interacciones y responsive. Para cada etapa se entrega decisión, justificación breve y criterio verificable.
+Se solicita organizar la tarea en pasos: analizar las necesidades del restaurante, definir las secciones, proponer el diseño, organizar la estructura y desarrollar el código por partes.
 
-**Observación:** facilita revisar y justificar decisiones. La documentación registra conclusiones y criterios, no razonamientos internos privados.
+**Observación:** dividir el trabajo en etapas facilita revisar decisiones y controlar el avance. La documentación registra conclusiones y criterios, no razonamientos internos privados.
 
 ### Comparación
-| Técnica | Aporte | Limitación |
-|---|---|---|
-| Zero-shot | Libertad creativa inicial | Puede asumir decisiones inesperadas |
-| One-shot | Orienta un patrón concreto | El ejemplo puede limitar alternativas |
-| Few-shot | Consistencia entre componentes | Requiere elegir buenos ejemplos |
-| Chain of Thought | Organización y justificación | Puede requerir más instrucciones |
 
-Ninguna técnica es universalmente mejor; pueden combinarse según la necesidad.
+| Técnica | Qué se proporciona | Aporte | Limitación |
+|---|---|---|---|
+| Zero-shot | Instrucción sin ejemplos | Libertad creativa inicial | Puede asumir decisiones inesperadas |
+| One-shot | Un ejemplo | Orienta un patrón concreto | El ejemplo puede limitar alternativas |
+| Few-shot | Varios ejemplos | Consistencia entre componentes | Requiere elegir buenos ejemplos |
+| Chain of Thought | Una tarea organizada por etapas | Organización y revisión del trabajo | Puede requerir más instrucciones |
+
+Ninguna técnica es universalmente mejor; pueden combinarse según la necesidad. En este taller se estudiaron mediante prompts y ejemplos aplicados al proyecto; no se presentan como cuatro experimentos independientes con resultados medidos.
 
 ## 5. Propuesta visual seleccionada
 
@@ -84,11 +87,11 @@ Se combinan los aportes de las cuatro técnicas:
 - Libertad de exploración de Zero-shot.
 - Organización de tarjetas de One-shot.
 - Consistencia de componentes de Few-shot.
-- Planificación y criterios verificables de Chain of Thought.
+- Planificación por etapas de Chain of Thought.
 
 **Arquitectura:** Inicio, Menú, Experiencia/Galería, Ubicación y Contacto/Eventos.  
 **Componentes:** encabezado, navegación, tarjetas de productos, filtros, galería, formulario, botones y pie de página.  
-**Responsive:** mobile-first; puntos de adaptación CSS en 900, 680 y 380 px. Se debe validar manualmente a 360, 768 y 1200 px.
+**Responsive:** mobile-first; puntos de adaptación CSS en 900, 680 y 380 px. Se validó manualmente a 360, 768 y 1200 px.
 
 ## 6. Implementación
 
@@ -103,49 +106,82 @@ Se combinan los aportes de las cuatro técnicas:
 - Preparación de mensaje para WhatsApp cuando se configure el número real.
 - Mensaje informativo si el número aún no está configurado.
 
-**Límites:** no hay backend, almacenamiento ni envío de formularios a un servidor. Precios, productos, dirección, horarios y servicios son demostrativos y deben confirmarse antes de un uso comercial. Las imágenes externas requieren conexión a internet.
+**Límites:** no hay backend, almacenamiento ni envío de formularios a un servidor. El formulario de contacto/eventos es demostrativo. La configuración del número real de WhatsApp queda pendiente. Precios, productos, dirección, horarios y servicios son demostrativos y deben confirmarse antes de un uso comercial. Las imágenes externas requieren conexión a internet.
 
 ## 7. Validación y refinamiento
 
-### Iteraciones documentadas
+### Iteraciones trabajadas
 1. Estructura HTML y correspondencia con el brief.
 2. Paleta, tipografía y variables CSS.
 3. Proporciones de tarjetas, galería y jerarquía de productos.
 4. Navegación móvil, filtros y validación del formulario.
 5. Media queries y adaptación a diferentes anchos.
 
-### Comprobaciones estáticas
+### Comprobaciones estáticas registradas
 - `node --check app.js`: aprobado en la revisión realizada.
 - HTML analizado con parser: aprobado en la revisión realizada.
 - IDs duplicados: no detectados.
 - Siete imágenes con atributo `alt`.
 - Elementos semánticos principales presentes.
 
-### Pendiente de validación manual
-Las pruebas visuales en navegador no se consideran completadas hasta ejecutarlas en el equipo del estudiante. Guardar capturas reales en `evidencias/`:
-- vista móvil 360 px;
-- vista tableta 768 px;
-- vista escritorio 1200 px;
-- filtro de hamburguesas;
-- validación de formulario;
-- consola sin errores propios del proyecto.
+### Pruebas manuales realizadas en el navegador
+
+| Prueba | Resultado observado |
+|---|---|
+| Apertura de la página con Live Server | Correcta |
+| Navegación desde el menú superior | Las secciones se desplazan correctamente |
+| Visualización de tarjetas, productos, fotografías, nombres y precios | Correcta |
+| Galería de Experiencia | Se visualiza correctamente |
+| Botón de Experiencia hacia el formulario de eventos | Redirige a la sección del formulario |
+| Sección Ubicación | Se visualiza correctamente |
+| Sección Contacto y campos del formulario | Se visualizan y permiten escribir; el envío es demostrativo |
+| Vista móvil, 360 px | Visualización correcta |
+| Vista tableta, 768 px | Visualización correcta |
+| Vista escritorio, 1200 px | Visualización correcta |
+| Consola del navegador después de recargar | No se observaron errores en rojo |
+
+**Evidencias:** el estudiante realizó y guardó capturas de las vistas de 360, 768 y 1200 px. Deben incorporarse al repositorio dentro de `evidencias/` para que queden disponibles junto con la documentación.
+
+**Pendiente:** configurar y probar el enlace de WhatsApp con el número real. Esta configuración se deja para una etapa posterior y no se considera una función verificada en esta entrega. Los datos comerciales continúan siendo demostrativos.
 
 No presentar capturas simuladas ni afirmar que se hicieron pruebas que no se ejecutaron.
 
-## 8. Reflexión final
+## 8. Reflexiones finales
 
-**¿Qué técnica fue más útil?** Few-shot ayudó a mantener consistencia visual; se complementó con Zero-shot para explorar y la planificación por etapas para justificar decisiones.
+### 1. ¿Qué aportó la inteligencia artificial durante el desarrollo del proyecto?
+Desde mi punto de vista, la inteligencia artificial aportó principalmente a la organización y al desglose de las tareas del proyecto, facilitando la planificación de cada etapa. También fue una herramienta de apoyo para generar y estructurar el código, permitiendo materializar las ideas y los objetivos que habíamos propuesto.
 
-**¿Diferencia entre One-shot y Few-shot?** One-shot usa un ejemplo; Few-shot utiliza varios patrones para orientar distintos componentes.
+Considero que su principal ventaja es el ahorro de tiempo durante el desarrollo, ya que permite agilizar diferentes actividades y concentrarnos en la construcción de la solución. Sin embargo, es importante tener claridad sobre lo que queremos desarrollar y revisar los resultados que genera.
 
-**¿Qué aportó Meta-prompting?** Permitió identificar requisitos que podían faltar: jerarquía, servicios, interacciones, responsive, tecnologías y restricciones.
+### 2. ¿Qué dificultades encontraste al trabajar con inteligencia artificial?
+Una de las principales dificultades fue lograr que la inteligencia artificial comprendiera exactamente lo que quería expresar, utilizando palabras sencillas y sin conocimientos técnicos avanzados. En algunas ocasiones fue necesario explicar nuevamente las ideas, agregar detalles y ajustar las instrucciones para obtener resultados más cercanos a lo que buscaba.
 
-**¿Qué decisiones requieren revisión humana?** La jerarquía de productos, la identidad rústica, la presencia secundaria de pinchos y chorizos y la veracidad de los datos comerciales.
+También considero que todavía estoy desarrollando mis habilidades en Prompt Engineering, por lo que este ejercicio me permitió comprender la importancia de escribir instrucciones claras, específicas y bien organizadas para mejorar las respuestas de la IA.
 
-**¿Qué debe verificarse en el código?** Navegación, filtros, validación, configuración de WhatsApp, imágenes, consola y responsive.
+### 3. ¿Qué aprendiste sobre las técnicas de prompting?
+Durante el taller comprendí que existen diferentes técnicas para darle instrucciones a la inteligencia artificial. Aprendí que podemos trabajar sin ejemplos (Zero-shot), proporcionar un ejemplo (One-shot), entregar varios ejemplos (Few-shot) o dividir una tarea en diferentes etapas (Chain of Thought).
 
-**¿Qué haría diferente?** Confirmaría datos reales desde el inicio, prepararía referencias propias y registraría cada prueba con capturas reales.
+Considero que estas técnicas permiten mejorar la comunicación con la IA y obtener resultados más cercanos a lo que buscamos, dependiendo del tipo de tarea que necesitemos desarrollar.
+
+### 4. ¿El resultado habría sido el mismo con una instrucción general?
+Considero que el resultado no habría sido el mismo, ya que al utilizar una instrucción general la inteligencia artificial probablemente habría generado una plantilla genérica, con poco detalle y sin una identidad definida.
+
+Al proporcionar información sobre el restaurante, su público, los colores, las secciones y las funcionalidades esperadas, conseguimos orientar mejor el desarrollo y obtener una propuesta más cercana a nuestras necesidades.
+
+Esto me permitió comprender que la calidad de los resultados depende en gran medida de la claridad y el contexto de las instrucciones que proporcionamos.
+
+### 5. ¿Es suficiente con copiar el código generado por la IA?
+Considero que no es suficiente con copiar el código generado por la inteligencia artificial. Es necesario revisarlo, probarlo y comprender cómo funciona, ya que esto nos permite identificar posibles errores, entender la lógica de programación y conocer la estructura del proyecto.
+
+Además, comprender el código facilita su mantenimiento y futuras modificaciones. Como desarrolladores, debemos tener la capacidad de explicar lo que estamos construyendo y no depender únicamente de las respuestas que nos proporciona la IA.
+
+### 6. ¿Cómo aplicarías lo aprendido sobre IA y Prompt Engineering en futuros proyectos?
+Aplicaría lo aprendido de una manera más metódica y detallada desde la planificación de cada proyecto, buscando organizar correctamente las tareas y proporcionar instrucciones claras para evitar pérdidas innecesarias de tiempo y recursos.
+
+Comprendí que, cuando organizamos y entregamos la información de manera adecuada, los modelos de inteligencia artificial pueden interpretar mejor nuestras necesidades y generar resultados más útiles. Esto nos permite, como desarrolladores, aprovechar mejor estas herramientas, optimizar nuestro trabajo y obtener soluciones de mayor calidad sin dejar de lado nuestro propio aprendizaje y criterio.
 
 ## 9. Conclusión
 
 La IA apoya el diseño y la maquetación cuando recibe contexto, objetivos y restricciones claras. Las técnicas de prompting permiten explorar, orientar y organizar propuestas, pero el desarrollador debe revisar las decisiones, comprobar el código y validar el resultado en el navegador.
+
+El desarrollo de ALEX PARRILLA permitió aplicar estas ideas en una página demostrativa, comprobar su visualización en diferentes tamaños de pantalla y reconocer tanto los aportes como los límites de utilizar inteligencia artificial durante el proceso.
