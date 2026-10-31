@@ -116,6 +116,17 @@ Se combinan los aportes de las cuatro técnicas:
 3. Proporciones de tarjetas, galería y jerarquía de productos.
 4. Navegación móvil, filtros y validación del formulario.
 5. Media queries y adaptación a diferentes anchos.
+6. Evolución de la identidad comercial: la propuesta inicial BRASAS se actualizó a ALEX PARRILLA. Se conservan ambas imágenes como evidencia del cambio de nombre y de la identidad elegida.
+
+**Evidencia de evolución de marca**
+
+| Identidad inicial | Identidad actual |
+|---|---|
+| ![Propuesta inicial BRASAS](evidencias/refinamiento/identidad-inicial-brasas.png) | ![Identidad ALEX PARRILLA](evidencias/refinamiento/identidad-refinada-alex-parrilla.png) |
+
+**Resultado visual final:**
+
+![Página final ALEX PARRILLA](evidencias/refinamiento/resultado.png)
 
 ### Comprobaciones estáticas registradas
 - `node --check app.js`: aprobado en la revisión realizada.
@@ -140,7 +151,17 @@ Se combinan los aportes de las cuatro técnicas:
 | Vista escritorio, 1200 px | Visualización correcta |
 | Consola del navegador después de recargar | No se observaron errores en rojo |
 
-**Evidencias:** el estudiante realizó y guardó capturas de las vistas de 360, 768 y 1200 px. Deben incorporarse al repositorio dentro de `evidencias/` para que queden disponibles junto con la documentación.
+**Evidencias incorporadas al repositorio:**
+
+- Inicio de escritorio: [ver captura](evidencias/inicio-escritorio.png).
+- Filtro de hamburguesas: [ver captura](evidencias/menu-hamburguesas.png.png).
+- Formulario vacío y validación de campos obligatorios: [formulario vacío](evidencias/formulario-vacio.png.png) y [campos obligatorios](evidencias/campos-obligatorios.png.png).
+- Formulario y aviso relacionado con WhatsApp: [ver captura](evidencias/formulario-whatsapp.png).
+- Consola del navegador: [ver captura](evidencias/consola-sin-errores.png.png).
+- Responsive 360 px: [ver captura](evidencias/responsive-360.png.png).
+- Responsive 768 px: [ver captura](evidencias/responsive-768.png.png).
+- Responsive 1200 px: [ver captura](evidencias/responsive-1200.png.png).
+- Refinamiento de identidad: las dos propuestas y el resultado final están en la subsección `evidencias/refinamiento/` y se muestran arriba.
 
 **Pendiente:** configurar y probar el enlace de WhatsApp con el número real. Esta configuración se deja para una etapa posterior y no se considera una función verificada en esta entrega. Los datos comerciales continúan siendo demostrativos.
 
